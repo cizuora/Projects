@@ -1,9 +1,12 @@
 package lab1;
 
-/**
-This program simulates the rolling of dice.
-*/
-
+/*================================
+Author     : Chidera Izuora
+Class Name : Book
+Date       : 03-15-2025
+Course     : CS2001
+Purpose    : Lab 1 
+=================================*/
 public class DiceDemo
 {
 public static void main(String[] args)

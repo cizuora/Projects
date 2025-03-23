@@ -2,6 +2,14 @@ package lab1;
 
 import java.util.Random;
 
+/*================================
+Author     : Chidera Izuora
+Class Name : Book
+Date       : 03-15-2025
+Course     : CS2001
+Purpose    : Lab 1 
+=================================*/
+
 /**
    The Die class simulates a six-sided die.
 */

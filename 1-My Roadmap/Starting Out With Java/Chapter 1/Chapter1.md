@@ -1,7 +1,3 @@
-This guide provides a comprehensive overview of the fundamental concepts discussed in Chapter 1 of your textbook, "Starting Out with Java™ 7th Edition," tailored for someone with no prior knowledge of Java or computer programming.
-
----
-
 ### **Introduction to Computers and Java**
 
 This chapter serves as an introduction to how computers work, why programming is essential, and specifically, what Java is all about.

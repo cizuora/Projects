@@ -1,2 +1,0 @@
-b1 == b2: false
-b1.equals(b2): true

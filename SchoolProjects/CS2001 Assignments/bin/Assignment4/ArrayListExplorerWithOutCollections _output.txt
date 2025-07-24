@@ -1,0 +1,57 @@
+Min Test: Expected: 1
+Min Test: Actual: 1
+Min Test: Passed
+
+Max Test: Expected: 6
+Max Test: Actual: 6
+Max Test: Passed
+
+Contains Duplicates Test: Expected: true
+Contains Duplicates Test: Actual: true
+Contains Duplicates Test: Passed
+
+Sum Test: Expected: 21
+Sum Test: Actual: 21
+Sum Test: Passed
+
+Average Test: Expected: 3.0
+Average Test: Actual: 3.0
+Average Test: Passed
+
+Length Test: Expected: 7
+Length Test: Actual: 7
+Length Test: Passed
+
+Count Test for 3: Expected: 2
+Count Test for 3: Actual: 2
+Count Test for 3: Passed
+
+Count Test for 100: Expected: 0
+Count Test for 100: Actual: 0
+Count Test for 100: Passed
+
+Sum of Evens Test: Expected: 14
+Sum of Evens Test: Actual: 14
+Sum of Evens Test: Passed
+
+Contains Test for 4: Expected: true
+Contains Test for 4: Actual: true
+Contains Test for 4: Passed
+
+Index Test for 4: Expected: 3
+Index Test for 4: Actual: 3
+Index Test for 4: Passed
+
+Index Test for 100: Expected: -1
+Index Test for 100: Actual: -1
+Index Test for 100: Passed
+
+Get Item Test at index 2: Expected: 3
+Get Item Test at index 2: Actual: 3
+Get Item Test: Passed
+
+ToString Test: Expected: [1, 2, 3, 4, 6, 3, 2]
+ToString Test: Actual: [1, 2, 3, 4, 6, 3, 2]
+ToString Test: Passed
+
+Total Score: 25/25

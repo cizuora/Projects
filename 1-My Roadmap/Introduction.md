@@ -3,10 +3,10 @@
 The folders are organized based on the personal roadmap I have laid out to become a full-stack developer. Some will include projects I have done for classes.
 ####  **Full-Stack Developer Roadmap**
 - [ ] **Programming Basics (Java)**
-	- [ ] **Syntax & Semantics**: Variables, data types (`int`, `string`, `boolean`), operators.
-	- [ ] **Programming Practices** for the industry.
-	- [ ] **Control Flow**: `if/else`, loops (`for`, `while`).
-	- [ ] **Functions/Methods**: Parameters, return values, scope, scanner, file.
+	- [x] **Syntax & Semantics**: Variables, data types (`int`, `string`, `boolean`), operators.
+	- [x] **Programming Practices** for the industry.
+	- [x] **Control Flow**: `if/else`, loops (`for`, `while`).
+	- [x] **Functions/Methods**: Parameters, return values, scope, scanner, file.
 	- [ ] **Data Structures**: Lists/arrays, dictionaries/objects.
 	- [ ] **Classes and Objects**: How they work and why
 	- [ ] **Encapsulation**

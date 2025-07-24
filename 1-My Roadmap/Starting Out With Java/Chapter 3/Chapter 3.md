@@ -1,7 +1,3 @@
-This guide will walk you through the core concepts of "Decision Structures" in Java, as covered in Chapter 3 of your textbook. This information is designed for someone with no prior Java knowledge, explaining each concept thoroughly and simply.
-
-***
-
 ### Chapter 3: Decision Structures – Guiding Your Program's Choices
 
 Chapter 3 of your textbook focuses on **Decision Structures**. In programming, decision structures allow your program to make choices and execute different parts of code based on certain conditions, much like you make decisions in your daily life. This chapter covers various ways to implement these choices, including:

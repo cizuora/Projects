@@ -120,6 +120,3 @@ check answer → display "Correct/Wrong"
 - **Enhanced GUI:** Use `JFrame` for a more polished interface.  
 
 ---
-
-### **Final Notes**  
-The `SuperMathHelper` program follows a structured development process, with clear modularization and robust error handling. The inclusion of both CLI and GUI versions demonstrates adaptability to user preferences. Future iterations could expand features (e.g., more unit conversions) and improve input validation.

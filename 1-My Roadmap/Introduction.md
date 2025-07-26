@@ -7,7 +7,11 @@ The folders are organized based on the personal roadmap I have laid out to becom
 	- [x] **Programming Practices** for the industry.
 	- [x] **Control Flow**: `if/else`, loops (`for`, `while`).
 	- [x] **Functions/Methods**: Parameters, return values, scope, scanner, file.
+<<<<<<< HEAD
 	- [ ] **Data Structures**: Lists/arrays, dictionaries/objects.
+=======
+8	- [ ] **Data Structures**: Lists/arrays, dictionaries/objects.
+>>>>>>> 6b2f6fd (ok)
 	- [ ] **Classes and Objects**: How they work and why
 	- [ ] **Encapsulation**
 	- [ ] **Inheritance**
@@ -20,7 +24,10 @@ The folders are organized based on the personal roadmap I have laid out to becom
 	- [x] **Inheritance**
 	- [x] **Polymorphism**
 	- [x] **Interfaces**
+<<<<<<< HEAD
 	- [x] **Error Handling**: Try/catch blocks and debug.
+=======
+>>>>>>> 6b2f6fd (ok)
 	- [ ] **Projects to accomplish**
 		- [ ] Building a number-guessing game
 		- [ ] Create a CLI to-do list.

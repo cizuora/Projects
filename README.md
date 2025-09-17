@@ -1,127 +1,76 @@
-👋🏿, my name is Chidera Izuora. I am a Trainee Developer. I am at the beginning stage of my Computer Science journey. Right now, I am training to become a full-stack developer.  I have created a roadmap so that any future employer can see what I have learned and keep track of my skills. 
+Here’s a draft for a “Profile README” page based on the info in your GitHub *Projects* repo. Feel free to tweak wording, order, add/remove sections as you like.
 
-The folders are organized based on my personal roadmap to becoming a full-stack developer. Some will include projects I have done for classes.
-####  **Full-Stack Developer Roadmap**
-- [ ] **Programming Basics (Java)**
-	- [ ] **Syntax & Semantics**: Variables, data types (`int`, `string`, `boolean`), operators.
-	- [ ] **Programming Practices** for the industry.
-	- [ ] **Control Flow**: `if/else`, loops (`for`, `while`).
-	- [ ] **Functions/Methods**: Parameters, return values, scope, scanner, file.
-	- [ ] **Data Structures**: Lists/arrays, dictionaries/objects.
-	- [ ] **Classes and Objects**: How they work and why
-	- [ ] **Encapsulation**
-	- [ ] **Inheritance**
-	- [ ] **Polymorphism**
-	- [ ] **Interfaces**
-	- [ ] **Error Handling**: Try/catch blocks and debug.
-	- [ ] **Projects to accomplish**
-		- [ ] Building a number-guessing game
-		- [ ] Create a CLI to-do list.
-		- [ ] Write a build file renamer script.
-- [ ] **Algorithms & Problem Solving**
-	- [ ] **Algorithmic Thinking**: Pseudocode, flowcharts.
-	- [ ] **Big O Notation**: O(1), O(n), O(n²).
-	- [ ] **Search Algorithms**: Linear search, binary search.
-	- [ ] **Sorting Algorithms**: Bubble Sort, Insertion Sort.
-	- [ ] **Recursion**: Factorials, Fibonacci sequence.
-	- [ ] **Projects**
-		- [ ] Implement binary search.
-		- [ ] Create a "FizzBuzz" or "Palindrome Checker"
-- [ ] **Data Structures & Algorithms**
-	- [ ] **Arrays & Strings**
-	- [ ] **Linked Lists**
-	- [ ] **Stacks & Queues**
-	- [ ] **Hash Tables**
-	- [ ] **Trees**
-	- [ ] **Heaps & Priority Queues**
-	- [ ] **Graphs**
-	- [ ] **Sorting Algorithms**
-	- [ ] **Dynamic Programming (DP)**(recursion)
-	- [ ] **Greedy Algorithms**
-	- [ ] **Graph Algorithms**
-	- [ ] **Projects**
-		- [ ] **Linked List Visualizer**: Build a tool to visualize insertion/deletion in linked lists.
-		- [ ] **Binary Search Tree (BST) Tracker**: Create an app to insert nodes and display traversals.
-		- [ ] **Pathfinding Simulator**: Implement Dijkstra’s/BFS to find the shortest path on a grid.
-		- [ ] **Dynamic Programming Challenges**: Solve 5+ classic DP problems (e.g., longest common subsequence).
-- [ ] **How Computers Work**
-	- [ ] **Hardware Basics** (CPU, RAM, Storage, Motherboard, I/O Devices)
-	- [ ] **Binary & Logic Gates** (Binary system, Logic gates, Boolean Algebra)
-		- [ ] **Projects**
-			- [ ] Simulate logic gates
-			- [ ] Build a simple circuit that adds two binary numbers (half-adder).
-	- [ ] **Operating Systems** (Kernel, Process Management, Memory Management, File Systems)
-	- [ ] **Networks & the Internet** (IP Addresses, DNS(Domain Name System), HTTP/HTTPS, Client-Server Model)
-		- [ ] **Projects**
-			- [ ] Write a simple HTTP server in Python/Node.js to serve a static webpage.
-	- [ ] **Compilers & Interpreters (Compiler, Interpreter, Assembly language)
-- [ ] **HTML & CSS**
-	- [ ] HTML Basics
-	- [ ] CSS Basics
-	- [ ] Responsive Design
-	- [ ] CSS Framework (Bootstrap or Tailwind CSS)
-	- [ ] **Projects**
-		- [ ] Build a static portfolio website.
-		- [ ] Create a responsive restaurant landing page.
-- [ ] **JavaScript & DOM Manipulation**
-	- [ ] JavaScipt Basics
-	- [ ] DOM Manipulation
-	- [ ] APU & Fetch
-	- [ ] Projects
-		- [ ] Build a to-do list app with local storage.
-		- [ ] Create a weather app using a public API (e.g., OpenWeatherMap).
-- [ ] **React & Modern Front-End Development**
-	- [ ] React Basics
-	- [ ] React Router
-	- [ ] State Management (Advanced)
-	- [ ] Styling in React
-	- [ ] API Integration
-	- [ ] **Projects**
-		- [ ] Build an e-commerce frontend (product listings, cart).
-		- [ ] Create a social media clone (posts, likes, comments).
-- [ ] **Node.js & Express.js Fundamentals**
-	- [ ] **Node.js Basics**
-	- [ ] **Express.js**
-	- [ ] **RESTful API Design**
-	- [ ] **Projects**
-		- [ ] Build a CRUD API for a to-do app (no database yet).
-		- [ ] Create a weather API proxy (fetch data from OpenWeatherMap and serve it).
-- [ ] Databases (SQL & NoSQL)
-	- [ ] **SQL (PostgreSQL)**
-	- [ ] **NoSQL (MongoDB)**
-	- [ ] **ORMs/ODMs**
-	- [ ] **Projects**
-		- [ ] Build a blog with PostgreSQL (users, posts, comments)
-		- [ ] Create a movie database with MongoDB (CRUD operations
-- [ ] **Advanced APIs, Auth & Deployment**
-	- [ ] **Authentication/Authorization**: JWT, OAuth, Password hashing (bcrypt).
-	- [ ] **API Security**: Rate limiting, input validation, CORS
-	- [ ] **Testing**: Unit tests (Jest), integration tests (Supertest).
-	- [ ] **Deployment & DevOps Basics**: Docker containers, AWS EC2/Heroku, Environment variables (`.env` files).
-	- [ ] **Projects**
-		- [ ] Build a user auth system with JWT.
-		- [ ] Dockerize and deploy a full-stack app to AWS/Heroku.
-- [ ] **Full-Stack Frameworks & Architecture**
-	- [ ] **Full-Stack Frameworks**: Next.js (React + Node.js) or Django (Python), Server-Side Rendering (SSR) vs. Static Site Generation (SSG)
-	- [ ] **API Integration**: Connect React front-end to Node.js / Express back-end.
-	- [ ] **State Management**: Use React Query or SWR for server-state synchronization.
-	- [ ] **Serverless Architecture**:  AWS Lambda, Vercel/Netlify Functions.
-	- [ ] **Projects**
-		- [ ] Build a Twitter/X clone with Next.js (front-end + API routes).
-		- [ ] - Create a full-stack e-commerce app (product catalog, cart, checkout).
-- [ ] **Advanced DevOps & Cloud Deployment**
-	- [ ] **Containerization**: Docker (images, containers, Docker Compose), Kubernetes basics.
-	- [ ] **CI/CD Pipelines**: GitHub Actions, GitLab CI, or Jenkins. Automate testing and deployment.
-	- [ ] **Cloud Platforms**: AWS (EC2, S3, RDS), Google Cloud, or Vercel/Heroku.
-	- [ ] **Infrastructure as Code (IaC)**: Terraform or AWS CloudFormation (basics).
-	- [ ] **Projects**:
-		- [ ] Dockerize a full-stack app and deploy it to AWS EC2.
-		- [ ] Set up a CI/CD pipeline for automatic deployment on push to main.
-- [ ] **Testing, Monitoring & Security**
-	- [ ] **Testing**: End-to-end (E2E) testing with Cypress or Playwright. Load testing (e.g., Apache JMeter).
-	- [ ] **Monitoring**: Logging (ELK Stack: Elasticsearch, Logstash, Kibana).Application Performance Monitoring (APM) tools (New Relic, Datadog).
-	- [ ] **Security**: HTTPS/SSL certificates (Let’s Encrypt). Vulnerability scanning (OWASP ZAP, Snyk).
-	- [ ] **Projects**
-		- [ ] Write E2E tests for your full-stack app.
-		- [ ] Set up monitoring alerts for server CPU/RAM usage.
-Thank you for viewing my work. Hope you have a good day.
+---
+
+# Hi there 👋 I’m Chidera Izuora
+
+I’m a Trainee Developer at the beginning of my Computer Science journey. Currently working toward becoming a Full-Stack Developer. Below you’ll find my roadmap, what I’ve learned so far, what I’m building, and how to reach me.
+
+---
+
+## 🛤 Roadmap to Full-Stack Development
+
+Here’s how I’m structuring my learning and project work:
+
+| Stage                                          | Key Topics                                                                                                                                                                               | Sample Projects / Skills                                                     |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Programming Basics (Java)**                  | Variables, data types, operators; control flow (`if/else`, loops); functions/methods; classes and objects; error handling; basic data structures like lists/arrays and dictionaries/maps | Number-guessing game • CLI to-do list • Build a filename-renamer script      |
+| **Algorithms & Problem Solving**               | Pseudocode, flowcharts; Big-O notation; sorting & search algorithms; recursion                                                                                                           | Implement binary search • FizzBuzz • Palindrome checker                      |
+| **Data Structures & Algorithms**               | Arrays & strings; linked lists; stacks, queues; hash tables; trees; graphs; dynamic programming                                                                                          | BST visualizer • Pathfinding simulator • Classic DP challenges               |
+| **How Computers Work**                         | Hardware basics; binary & logic gates; operating systems; networks; compilers/interpreters                                                                                               | Build simple HTTP server • simulate logic gates • explore process management |
+| **Front-End Web**                              | HTML, CSS, responsive design; DOM manipulation; CSS frameworks (Bootstrap or Tailwind); JavaScript basics & APIs                                                                         | Build responsive landing pages • weather app using public API                |
+| **Modern Front-End Frameworks**                | React, React Router, state management, API integration                                                                                                                                   | Social media clone front end • e-commerce product listing & cart             |
+| **Back-End & APIs**                            | Node.js, Express.js; RESTful API design; authentication, authorization; working with SQL & NoSQL databases                                                                               | CRUD API for to-do app • blog with PostgreSQL • movie database with MongoDB  |
+| **Authentication, Deployment & DevOps Basics** | JWT, OAuth, password hashing; deploying projects; using Docker; environment config; CI/CD pipelines                                                                                      | Docker-ize a full-stack app • deploy to Heroku/AWS • set up GitHub Actions   |
+| **Advanced Topics**                            | Cloud platforms, serverless architecture, monitoring, security, testing (unit, integration, end-to-end)                                                                                  | E2E testing • Infrastructure as Code • Application Performance Monitoring    |
+
+---
+
+## 🚧 Projects & Experience
+
+* My repo is organized according to my roadmap; folder names reflect stages in my learning.
+* Some folders contain **school projects**; others are side projects I created to practice specific skills.
+* As I complete more projects I will link to live demos, code examples, screenshots, etc.
+
+---
+
+## 🔍 Skills & Tools
+
+Here are some of the tools, languages, and technologies I’m working with:
+
+* **Languages**: Java, JavaScript
+* **Front-End**: HTML, CSS, React
+* **Back-End**: Node.js, Express
+* **Databases**: SQL (PostgreSQL), NoSQL (MongoDB)
+* **Other**: REST APIs, authentication (JWT, OAuth), testing, deployment, Docker, Git/GitHub
+
+---
+
+## 🌱 What I’m Learning
+
+Right now I am focusing on:
+
+* Building full-stack apps from front to back
+* Deploying apps to production (Heroku / AWS)
+* Writing tests (unit, integration, E2E)
+* Deepening my knowledge of algorithms and data structures
+
+---
+
+## 📫 Get In Touch
+
+If you want to reach me:
+
+* Email: *\[your email]*
+* LinkedIn: *\[your LinkedIn profile]*
+* GitHub: *github.com/cizuora*
+
+---
+
+## ⚡ Fun Fact
+
+> “The road to mastery is always under construction.” I believe in continuous learning and building, no matter how small the project.
+
+---
+
+If you want, I can also format this README with badges (languages, tech stack), or suggest a visual layout / theme. Do you want me to build that out for you?

@@ -1,0 +1,17 @@
+
+Conversion Menu:
+1. Convert to kilometers
+2. Convert to inches
+3. Convert to feet
+4. Quit the program
+Enter your choice: 1
+Enter the distance in meters: 23.0
+23.00 meters is 0.02 kilometers.
+
+Conversion Menu:
+1. Convert to kilometers
+2. Convert to inches
+3. Convert to feet
+4. Quit the program
+Enter your choice: 4
+Exiting the program. Goodbye!

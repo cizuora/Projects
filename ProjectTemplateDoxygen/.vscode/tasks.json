@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Doxygen Docs",
+            "type": "shell",
+            "command": "doxygen",
+            "args": ["Doxyfile"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Generate PDF",
+            "type": "shell",
+            "command": "cd docs/latex && pdflatex -interaction=nonstopmode refman.tex && pdflatex -interaction=nonstopmode refman.tex",
+            "dependsOn": "Generate Doxygen Docs",
+            "group": "build"
+        },
+        {
+            "label": "Open HTML Docs",
+            "type": "shell",
+            "command": "start docs/html/index.html",
+            "windows": {
+                "command": "start docs\\html\\index.html"
+            },
+            "linux": {
+                "command": "xdg-open docs/html/index.html"
+            },
+            "osx": {
+                "command": "open docs/html/index.html"
+            },
+            "dependsOn": "Generate Doxygen Docs"
+        },
+        {
+            "label": "Open PDF",
+            "type": "shell",
+            "command": "start docs/latex/refman.pdf",
+            "windows": {
+                "command": "start docs\\latex\\refman.pdf"
+            },
+            "linux": {
+                "command": "xdg-open docs/latex/refman.pdf"
+            },
+            "osx": {
+                "command": "open docs/latex/refman.pdf"
+            },
+            "dependsOn": "Generate PDF"
+        }
+    ]
+}

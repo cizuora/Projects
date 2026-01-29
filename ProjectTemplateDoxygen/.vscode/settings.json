@@ -1,0 +1,34 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.cpp": "cpp",
+        "Doxyfile": "ini"
+    },
+    
+    // Doxygen extension settings
+    "doxdocgen.file.copyrightTag": "@copyright",
+    "doxdocgen.generic.authorEmail": "cizuora@gmail.com",
+    "doxdocgen.generic.authorName": "Chidera Izuora",
+    "doxdocgen.generic.authorTag": "@cizuora",
+    "doxdocgen.generic.dateFormat": "YYYY-MM-DD",
+    "doxdocgen.generic.paramTemplate": "@param[in] {param} ",
+    "doxdocgen.generic.returnTemplate": "@return ",
+    "doxdocgen.generic.briefTemplate": "@brief ",
+    "doxdocgen.generic.customTags": [
+        "@pre",
+        "@post",
+        "@note",
+        "@remark",
+        "@test",
+        "@see",
+        "@details"
+    ],
+    
+    // Editor settings
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "off"
+}

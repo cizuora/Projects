@@ -1,0 +1,62 @@
+# ============================================
+# UNIVERSAL DOXYFILE TEMPLATE
+# Works for ANY C++ project
+# ============================================
+
+# Project Info
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "${PROJECT_NAME}"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "${PROJECT_DESCRIPTION}"
+OUTPUT_DIRECTORY       = ./docs
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = English
+
+# Extract Everything
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+# Source Files
+INPUT                  = ./src
+FILE_PATTERNS          = *.h *.hpp *.cpp *.c
+RECURSIVE              = YES
+
+# Source Browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Diagrams (Set HAVE_DOT = NO if no Graphviz)
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+# Output Formats
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+# HTML Options
+HTML_DYNAMIC_SECTIONS  = YES
+GENERATE_TREEVIEW      = YES
+SEARCHENGINE           = YES
+
+# LaTeX/PDF Options
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+
+# Index
+ALPHABETICAL_INDEX     = YES
+COLS_IN_ALPHA_INDEX    = 4
+
+# Search
+SEARCHENGINE           = YES
+
+# Use this for NO PDF (HTML only):
+# GENERATE_LATEX = NO

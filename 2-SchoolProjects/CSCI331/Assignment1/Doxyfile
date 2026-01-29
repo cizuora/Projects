@@ -1,0 +1,33 @@
+# Project
+PROJECT_NAME           = "Array Class Documentation"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Dynamic integer array with bounds checking"
+OUTPUT_DIRECTORY       = ./docs
+
+# Output formats
+GENERATE_LATEX         = YES
+GENERATE_HTML          = YES
+GENERATE_RTF           = NO
+
+# Source browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+
+# UML diagrams
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+UML_LOOK               = YES
+
+# Extraction
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Preprocessing
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+
+# Alphabetical index
+ALPHABETICAL_INDEX     = YES

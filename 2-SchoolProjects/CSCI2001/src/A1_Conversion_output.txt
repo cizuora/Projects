@@ -1,0 +1,8 @@
+
+Conversion Menu:
+1. Convert to kilometers
+2. Convert to inches
+3. Convert to feet
+4. Quit the program
+Enter your choice: 2
+Enter the distance in meters: Error: Please enter a valid number.

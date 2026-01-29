@@ -1,0 +1,1 @@
+Book[title=AI, author=Jane Smith, price=40.0]

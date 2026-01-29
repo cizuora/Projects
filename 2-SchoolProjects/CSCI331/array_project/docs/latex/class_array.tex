@@ -1,0 +1,943 @@
+\doxysection{Array Class Reference}
+\hypertarget{class_array}{}\label{class_array}\index{Array@{Array}}
+
+
+Dynamic integer array class with bounds checking and I/\+O operators \doxylink{class_array}{Array} class:\+ like an int array (retains all functionality) but also includes additional features:\+ -- allows input and output of the whole array -- allows for comparison of 2 arrays, element by element -- allows for assignment of 2 arrays -- size is part of the class (so no longer needs to be passed) -- includes range checking, program terminates for out-\/of-\/bound subscripts.  
+
+
+
+
+{\ttfamily \+\#include $<$array.\+h$>$}
+
+
+
+Collaboration diagram for Array:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_array__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_array_a18be6b41bcabcbf5d003f888d3085227}{Array}} (int array\+Size=10)
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_array}{Array} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_array_a4be4924720ea2a0ecf9e163eb39a6591}{Array}} (const \doxymbox{\hyperlink{class_array}{Array}} \&init)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{class_array}{Array} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_array_abcabe567f41f7798d2f97babcc443c6f}{\texorpdfstring{$\sim$}{\string~}\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_array}{Array} class. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_array_af29bf627de157570d00c700773884e20}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the array. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_array}{Array}} \& \doxymbox{\hyperlink{class_array_a99a5adc2d27f7f9dc338e325ea356411}{operator=}} (const \doxymbox{\hyperlink{class_array}{Array}} \&right)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \doxylink{class_array}{Array} class. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_array_a36e4123816b8ae96a71dcaeb337491e3}{operator==}} (const \doxymbox{\hyperlink{class_array}{Array}} \&right) const
+\begin{DoxyCompactList}\small\item\em Equality comparison operator. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_array_a0d6015529a2d34e476ab261c0148473f}{operator!=}} (const \doxymbox{\hyperlink{class_array}{Array}} \&right) const
+\begin{DoxyCompactList}\small\item\em Inequality comparison operator. \end{DoxyCompactList}\item 
+int \& \doxymbox{\hyperlink{class_array_a183002e58d8c794882bce511eaf64fe3}{operator\+[$\,$]\+}} (int subscript)
+\begin{DoxyCompactList}\small\item\em Subscript operator for array access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \doxymbox{\hyperlink{class_array_aabdedbfd0e0010baddca16efc41125ec}{get\+Array\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of \doxylink{class_array}{Array} objects instantiated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}
+\begin{DoxyCompactList}\small\item\em pointer to first element of array \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}
+\begin{DoxyCompactList}\small\item\em size of the array \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \doxymbox{\hyperlink{class_array_aec0d00cb7dcfbabb6196311e52844312}{array\+Count}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \doxymbox{\hyperlink{class_array_ac789bced35c1e04e256a18bc430f3a34}{operator$>$$>$}} (istream \&input, \doxymbox{\hyperlink{class_array}{Array}} \&a)
+\begin{DoxyCompactList}\small\item\em Overloaded input operator for class \doxylink{class_array}{Array}. \end{DoxyCompactList}\item 
+ostream \& \doxymbox{\hyperlink{class_array_ad62af452acc73da57eaea9ffd9796e48}{operator$<$$<$}} (ostream \&output, const \doxymbox{\hyperlink{class_array}{Array}} \&a)
+\begin{DoxyCompactList}\small\item\em Overloaded output operator for class \doxylink{class_array}{Array}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dynamic integer array class with bounds checking and I/\+O operators \doxylink{class_array}{Array} class:\+ like an int array (retains all functionality) but also includes additional features:\+ -- allows input and output of the whole array -- allows for comparison of 2 arrays, element by element -- allows for assignment of 2 arrays -- size is part of the class (so no longer needs to be passed) -- includes range checking, program terminates for out-\/of-\/bound subscripts. 
+
+Driver program for the \doxylink{class_array}{Array} class This program tests the functionality of the \doxylink{class_array}{Array} class including:\+
+
+Dynamic integer array class with bounds checking and I/\+O operators.
+
+Assumptions:\+ -- size defaults to a fixed size of 10 if size is not specified -- array elements are initialized to zero -- user must enter valid integers when using \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} -- in \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, integers are displayed 10 per line
+
+\doxylink{class_array}{Array} class:\+ like an int array (retains all functionality) but also includes additional features:\+ -- allows input and output of the whole array -- allows for comparison of 2 arrays, element by element -- allows for assignment of 2 arrays -- size is part of the class (so no longer needs to be passed) -- includes range checking, program terminates for out-\/of-\/bound subscripts
+
+Implementation and assumptions:\+ -- size defaults to a fixed size of 10 if size is not specified -- array elements are initialized to zero -- user must enter valid integers when using \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} -- in \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, integers are displayed 10 per line
+
+
+\begin{DoxyItemize}
+\item Construction and destruction
+\item Input and output operators
+\item Comparison operators (== and !=)
+\item Assignment operator
+\item Subscript operator with bounds checking
+\item Static member function for counting instances
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Ensure to provide valid integer input when prompted 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000012}{Test}}]Comprehensive test of \doxylink{class_array}{Array} class features \end{DoxyRefDesc}
+
+
+Definition at line \doxymbox{\hyperlink{array_8h_source_l00032}{32}} of file \doxymbox{\hyperlink{array_8h_source}{array.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_array_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_array_a18be6b41bcabcbf5d003f888d3085227}\index{Array@{Array}!Array@{Array}}
+\index{Array@{Array}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_array_a18be6b41bcabcbf5d003f888d3085227} 
+Array::\+\+Array (\begin{DoxyParamCaption}\item[{int}]{array\+Size}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_array}{Array} class. 
+
+Default constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em array\+Size} & Initial size of the array (defaults to 10) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+ptr points to array of size array\+Size, all elements zero, array\+Count is incremented 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Newly constructed \doxylink{class_array}{Array} object 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Negative input values result in the default size of 10 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000004}{Test}}]Test with positive, negative, and zero sizes\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em array\+Size} & Initial size of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+ptr points to an array of size array\+Size and all elements of the array have been initialized to zero. array\+Count is incremented. Negative input values result in the default size of 10 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Newly constructed \doxylink{class_array}{Array} object 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Uses assert to ensure memory allocation succeeds 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00044}{44}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ ++\doxymbox{\hyperlink{class_array_aec0d00cb7dcfbabb6196311e52844312}{arrayCount}};}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}\ =\ (arraySize\ >\ 0\ ?\ arraySize\ :\ 10);}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}];}
+\DoxyCodeLine{00049\ \ \ \ \ assert(\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ !=\ NULL);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i]\ =\ 0;}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8h_source_l00162}{array\+Count}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{array_8cpp_source_l00065}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00158}{operator!=()}}, \doxymbox{\hyperlink{array_8cpp_source_l00220}{operator$<$$<$}}, \doxymbox{\hyperlink{array_8cpp_source_l00109}{operator=()}}, \doxymbox{\hyperlink{array_8cpp_source_l00136}{operator==()}}, and \doxymbox{\hyperlink{array_8cpp_source_l00201}{operator$>$$>$}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_array_a18be6b41bcabcbf5d003f888d3085227_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_a4be4924720ea2a0ecf9e163eb39a6591}\index{Array@{Array}!Array@{Array}}
+\index{Array@{Array}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_array_a4be4924720ea2a0ecf9e163eb39a6591} 
+Array::\+\+Array (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_array}{Array}} \&}]{init}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{class_array}{Array} class. 
+
+Copy constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em init} & \doxylink{class_array}{Array} to copy from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+init.\+ptr points to an array of size at least init.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+init is copied into \texorpdfstring{$\ast$}{*}this, array\+Count is incremented 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Newly constructed \doxylink{class_array}{Array} object as a copy of init 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Creates deep copy of the array 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000005}{Test}}]Test copying arrays of various sizes \end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em init} & \doxylink{class_array}{Array} to copy from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+init.\+ptr points to an array of size at least init.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+init is copied into \texorpdfstring{$\ast$}{*}this, array\+Count is incremented 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Newly constructed \doxylink{class_array}{Array} object as a copy of init 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Creates deep copy of the array 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00065}{65}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ ++\doxymbox{\hyperlink{class_array_aec0d00cb7dcfbabb6196311e52844312}{arrayCount}};}
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}\ =\ init.\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};}
+\DoxyCodeLine{00069\ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}];}
+\DoxyCodeLine{00070\ \ \ \ \ assert(\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ !=\ NULL);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i]\ =\ init.\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i];}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8h_source_l00162}{array\+Count}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_array_a4be4924720ea2a0ecf9e163eb39a6591_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_abcabe567f41f7798d2f97babcc443c6f}\index{Array@{Array}!````~Array@{\texorpdfstring{$\sim$}{\string~}Array}}
+\index{````~Array@{\texorpdfstring{$\sim$}{\string~}Array}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Array()}{\string~Array()}}
+{\footnotesize\ttfamily \label{class_array_abcabe567f41f7798d2f97babcc443c6f} 
+Array::\+\texorpdfstring{$\sim$}{\string~}\+Array (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_array}{Array} class. 
+
+Destructor.
+
+\begin{DoxyPrecond}{Precondition}
+ptr points to memory on the heap 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\doxylink{class_array}{Array} for ptr is deallocated, array\+Count is decremented 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Automatically called when \doxylink{class_array}{Array} object goes out of scope
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+ptr points to memory on the heap 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\doxylink{class_array}{Array} for ptr is deallocated, array\+Count is decremented 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Automatically called when object goes out of scope 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00084}{84}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ -\/-\/\doxymbox{\hyperlink{class_array_aec0d00cb7dcfbabb6196311e52844312}{arrayCount}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{delete}[]\ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}};}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8h_source_l00162}{array\+Count}}, and \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_array_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_array_aabdedbfd0e0010baddca16efc41125ec}\index{Array@{Array}!getArrayCount@{getArrayCount}}
+\index{getArrayCount@{getArrayCount}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{getArrayCount()}{getArrayCount()}}
+{\footnotesize\ttfamily \label{class_array_aabdedbfd0e0010baddca16efc41125ec} 
+int Array::\+get\+Array\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the number of \doxylink{class_array}{Array} objects instantiated. 
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the number of arrays 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Count of \doxylink{class_array}{Array} objects currently instantiated 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Static member function 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000011}{Test}}]Verify count increases with construction and decreases with destruction \end{DoxyRefDesc}
+
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the number of arrays 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Number of \doxylink{class_array}{Array} objects currently instantiated 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Static member function 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00187}{187}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00187\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_array_aec0d00cb7dcfbabb6196311e52844312}{arrayCount}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8h_source_l00162}{array\+Count}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{arraydriver_8cpp_source_l00031}{main()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_array_aabdedbfd0e0010baddca16efc41125ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_af29bf627de157570d00c700773884e20}\index{Array@{Array}!getSize@{getSize}}
+\index{getSize@{getSize}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{class_array_af29bf627de157570d00c700773884e20} 
+int Array::\+get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the array. 
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the size of the array 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Current size of the array 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000006}{Test}}]Verify size matches what was specified during construction \end{DoxyRefDesc}
+
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the size of the array 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Size of the array 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00097}{97}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{arraydriver_8cpp_source_l00031}{main()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{class_array_af29bf627de157570d00c700773884e20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_a0d6015529a2d34e476ab261c0148473f}\index{Array@{Array}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_array_a0d6015529a2d34e476ab261c0148473f} 
+bool Array::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_array}{Array}} \&}]{right}{}\end{DoxyParamCaption}) const}
+
+
+
+Inequality comparison operator. 
+
+Inequality operator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ptr and right.\+ptr point to arrays with size at least size and right.\+size, respectively 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+false is returned if the arrays have the same size and elements, true otherwise 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if arrays are not equal, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000009}{Test}}]Test with equal and unequal arrays \end{DoxyRefDesc}
+\begin{DoxyRemark}{Remarks}
+Uses operator== for implementation
+\end{DoxyRemark}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ptr and right.\+ptr point to arrays with size at least size and right.\+size, respectively 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+false is returned if the arrays have the same size and elements true is return otherwise 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if arrays are not equal, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Uses operator== for implementation 
+\end{DoxyRemark}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00158}{158}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ ==\ right);}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_array_a0d6015529a2d34e476ab261c0148473f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_a99a5adc2d27f7f9dc338e325ea356411}\index{Array@{Array}!operator=@{operator=}}
+\index{operator=@{operator=}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_array_a99a5adc2d27f7f9dc338e325ea356411} 
+const \doxymbox{\hyperlink{class_array}{Array}} \& Array::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_array}{Array}} \&}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator for \doxylink{class_array}{Array} class. 
+
+Assignment operator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+right.\+ptr points to an array of size at least right.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\texorpdfstring{$\ast$}{*}this is assigned the same array as right 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned array 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Self-\/assignment is checked and handled properly 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000007}{Test}}]Test assignment between arrays of different sizes\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+right.\+ptr points to an array of size at least right.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\texorpdfstring{$\ast$}{*}this is assigned the same array as right 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to \texorpdfstring{$\ast$}{*}this 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Handles self-\/assignment and creates deep copy 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00109}{109}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (\&right\ !=\ \textcolor{keyword}{this})}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}\ =\ right.\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}];}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ assert(\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}\ !=\ NULL);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i]\ =\ right.\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i];}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_array_a99a5adc2d27f7f9dc338e325ea356411_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_a36e4123816b8ae96a71dcaeb337491e3}\index{Array@{Array}!operator==@{operator==}}
+\index{operator==@{operator==}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_array_a36e4123816b8ae96a71dcaeb337491e3} 
+bool Array::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_array}{Array}} \&}]{right}{}\end{DoxyParamCaption}) const}
+
+
+
+Equality comparison operator. 
+
+Equality operator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ptr and right.\+ptr point to arrays with size at least size and right.\+size, respectively 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+true is returned if the arrays have the same size and elements, false otherwise 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if arrays are equal, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000008}{Test}}]Test with equal and unequal arrays \end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em right} & \doxylink{class_array}{Array} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ptr and right.\+ptr point to arrays with size at least size and right.\+size, respectively 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+true is returned if the arrays have the same size and elements false is return otherwise 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if arrays are equal, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000001}{Test}}]Test with arrays of different sizes and contents \end{DoxyRefDesc}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00136}{136}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}}\ !=\ right.\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}})}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i]\ !=\ right.\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i])}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00145\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_array_a36e4123816b8ae96a71dcaeb337491e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_array_a183002e58d8c794882bce511eaf64fe3}\index{Array@{Array}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_array_a183002e58d8c794882bce511eaf64fe3} 
+int \& Array::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{int}]{subscript}{}\end{DoxyParamCaption})}
+
+
+
+Subscript operator for array access. 
+
+Subscript operator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em subscript} & Index to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 \texorpdfstring{$<$}{<}= subscript \texorpdfstring{$<$}{<} size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the array value at position "{}subscript"{} 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to array element at given index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Terminates program if subscript is out of range 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000010}{Test}}]Test valid and invalid indices\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em subscript} & Index to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 \texorpdfstring{$<$}{<}= subscript \texorpdfstring{$<$}{<} size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the array value at position "{}subscript"{} 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to array element at given index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Terminates program if subscript out of range 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00173}{173}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ assert(0\ <=\ subscript\ \&\&\ subscript\ <\ \doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}});}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[subscript];}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+
+
+\label{doc-related-members}
+\Hypertarget{class_array_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_array_ad62af452acc73da57eaea9ffd9796e48}\index{Array@{Array}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_array_ad62af452acc73da57eaea9ffd9796e48} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{output}{, }\item[{const \doxymbox{\hyperlink{class_array}{Array}} \&}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded output operator for class \doxylink{class_array}{Array}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em output} & Output stream \\
+\hline
+\doxymbox{\texttt{in}}  & {\em a} & \doxylink{class_array}{Array} to output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+a.\+ptr must point to an array with size at least a.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The first a.\+size elements of a.\+ptr are sent to output stream 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Outputs 10 integers per line with trailing newline 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000003}{Test}}]Test output formatting with various array sizes \end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em output} & Output stream \\
+\hline
+\doxymbox{\texttt{in}}  & {\em a} & \doxylink{class_array}{Array} to output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+a.\+ptr must point to an array with size at least a.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The first a.\+size elements of a.\+ptr are sent to the output istream 10 per line with a trailing endl 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Outputs 10 integers per line 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00220}{220}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00221\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ a.\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00224\ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ output\ <<\ a.\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i]\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((i\ +\ 1)\ \%\ 10\ ==\ 0)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ output\ <<\ endl;}
+\DoxyCodeLine{00228\ \ \ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ \%\ 10\ !=\ 0)}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ output\ <<\ endl;}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00233\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+\Hypertarget{class_array_ac789bced35c1e04e256a18bc430f3a34}\index{Array@{Array}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_array_ac789bced35c1e04e256a18bc430f3a34} 
+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{input}{, }\item[{\doxymbox{\hyperlink{class_array}{Array}} \&}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded input operator for class \doxylink{class_array}{Array}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em input} & Input stream \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em a} & \doxylink{class_array}{Array} to read into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the input stream 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+a.\+ptr must point to an array with size at least a.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The first a.\+size elements of a.\+ptr are filled with integers 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Reads exactly a.\+size integers from the stream 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Test}
+\item[\doxymbox{\hyperlink{test__test000002}{Test}}]Test with valid integer input \end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em input} & Input stream \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em a} & \doxylink{class_array}{Array} to read into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+a.\+ptr must point to an array with size at least a.\+size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The first a.\+size elements of a.\+ptr are filled with integers read from the input istream 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Reference to the input stream 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads exactly a.\+size integers from the stream 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{array_8cpp_source_l00201}{201}} of file \doxymbox{\hyperlink{array_8cpp_source}{array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ a.\doxymbox{\hyperlink{class_array_a8780e83e6e49494e704a4304642e99ef}{size}};\ i++)}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ input\ >>\ a.\doxymbox{\hyperlink{class_array_aed1d2943c52e2503817744cbace2d805}{ptr}}[i];}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{return}\ input;}
+\DoxyCodeLine{00206\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8h_source_l00160}{ptr}}, and \doxymbox{\hyperlink{array_8h_source_l00161}{size}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_array_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_array_aec0d00cb7dcfbabb6196311e52844312}\index{Array@{Array}!arrayCount@{arrayCount}}
+\index{arrayCount@{arrayCount}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{arrayCount}{arrayCount}}
+{\footnotesize\ttfamily \label{class_array_aec0d00cb7dcfbabb6196311e52844312} 
+int Array::\+array\+Count = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\hypertarget{class_array_autotoc_md0}{}\doxysubsection{\texorpdfstring{of Arrays instantiated (static counter)}{of Arrays instantiated (static counter)}}\label{class_array_autotoc_md0}
+
+
+Definition at line \doxymbox{\hyperlink{array_8h_source_l00162}{162}} of file \doxymbox{\hyperlink{array_8h_source}{array.\+h}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{array_8cpp_source_l00065}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00187}{get\+Array\+Count()}}, and \doxymbox{\hyperlink{array_8cpp_source_l00084}{\texorpdfstring{$\sim$}{\string~}\+Array()}}.
+
+\Hypertarget{class_array_aed1d2943c52e2503817744cbace2d805}\index{Array@{Array}!ptr@{ptr}}
+\index{ptr@{ptr}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily \label{class_array_aed1d2943c52e2503817744cbace2d805} 
+int\texorpdfstring{$\ast$}{*} Array::\+ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointer to first element of array 
+
+
+
+Definition at line \doxymbox{\hyperlink{array_8h_source_l00160}{160}} of file \doxymbox{\hyperlink{array_8h_source}{array.\+h}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{array_8cpp_source_l00065}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00220}{operator$<$$<$}}, \doxymbox{\hyperlink{array_8cpp_source_l00109}{operator=()}}, \doxymbox{\hyperlink{array_8cpp_source_l00136}{operator==()}}, \doxymbox{\hyperlink{array_8cpp_source_l00201}{operator$>$$>$}}, \doxymbox{\hyperlink{array_8cpp_source_l00173}{operator\+[$\,$]\+()}}, and \doxymbox{\hyperlink{array_8cpp_source_l00084}{\texorpdfstring{$\sim$}{\string~}\+Array()}}.
+
+\Hypertarget{class_array_a8780e83e6e49494e704a4304642e99ef}\index{Array@{Array}!size@{size}}
+\index{size@{size}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{class_array_a8780e83e6e49494e704a4304642e99ef} 
+int Array::\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+size of the array 
+
+
+
+Definition at line \doxymbox{\hyperlink{array_8h_source_l00161}{161}} of file \doxymbox{\hyperlink{array_8h_source}{array.\+h}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{array_8cpp_source_l00065}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00044}{Array()}}, \doxymbox{\hyperlink{array_8cpp_source_l00097}{get\+Size()}}, \doxymbox{\hyperlink{array_8cpp_source_l00220}{operator$<$$<$}}, \doxymbox{\hyperlink{array_8cpp_source_l00109}{operator=()}}, \doxymbox{\hyperlink{array_8cpp_source_l00136}{operator==()}}, \doxymbox{\hyperlink{array_8cpp_source_l00201}{operator$>$$>$}}, and \doxymbox{\hyperlink{array_8cpp_source_l00173}{operator\+[$\,$]\+()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{array_8h}{array.\+h}}\item 
+\doxymbox{\hyperlink{array_8cpp}{array.\+cpp}}\end{DoxyCompactItemize}

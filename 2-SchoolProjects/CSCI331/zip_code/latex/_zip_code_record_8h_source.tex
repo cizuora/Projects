@@ -1,0 +1,28 @@
+\doxysection{Zip\+Code\+Record.\+h}
+\hypertarget{_zip_code_record_8h_source}{}\label{_zip_code_record_8h_source}\doxymbox{\hyperlink{_zip_code_record_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ ZIPCODERECORD\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ ZIPCODERECORD\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_zip_code_record_a945cbd69ab4bd148868e31aa2b807cc4}{ZipCodeRecord}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7}{zipCode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_zip_code_record_a3990aec69ba79de839575d3669047e59}{placeName}};\ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_zip_code_record_a831a44c6a908084952075b912f293963}{state}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_zip_code_record_a5f38f658c9f850fd6efd7d5c7c660d2d}{county}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5}{latitude}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_zip_code_record_a627c754e94e5629ec977067edb056de1}{longitude}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{struct_zip_code_record_a945cbd69ab4bd148868e31aa2b807cc4}{ZipCodeRecord}}()\ :\ \doxymbox{\hyperlink{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7}{zipCode}}(0),\ \doxymbox{\hyperlink{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5}{latitude}}(0.0),\ \doxymbox{\hyperlink{struct_zip_code_record_a627c754e94e5629ec977067edb056de1}{longitude}}(0.0)\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{struct_zip_code_record_acad0813711cbde6db1650eadd46ecf6b}{ZipCodeRecord}}(\textcolor{keywordtype}{int}\ zip,\ \textcolor{keyword}{const}\ std::string\&\ place,\ \textcolor{keyword}{const}\ std::string\&\ st,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ cnty,\ \textcolor{keywordtype}{double}\ lat,\ \textcolor{keywordtype}{double}\ lon)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7}{zipCode}}(zip),\ \doxymbox{\hyperlink{struct_zip_code_record_a3990aec69ba79de839575d3669047e59}{placeName}}(place),\ \doxymbox{\hyperlink{struct_zip_code_record_a831a44c6a908084952075b912f293963}{state}}(st),\ \doxymbox{\hyperlink{struct_zip_code_record_a5f38f658c9f850fd6efd7d5c7c660d2d}{county}}(cnty),\ \doxymbox{\hyperlink{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5}{latitude}}(lat),\ \doxymbox{\hyperlink{struct_zip_code_record_a627c754e94e5629ec977067edb056de1}{longitude}}(lon)\ \{\}\ }
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ZIPCODERECORD\_H}}
+
+\end{DoxyCode}

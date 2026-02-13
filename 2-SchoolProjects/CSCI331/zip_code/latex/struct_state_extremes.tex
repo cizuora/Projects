@@ -1,0 +1,153 @@
+\doxysection{State\+Extremes Struct Reference}
+\hypertarget{struct_state_extremes}{}\label{struct_state_extremes}\index{StateExtremes@{StateExtremes}}
+
+
+Holds the extreme ZIP codes for a single state.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_state_extremes_afa4035d49cd82c90fa5b4005b83129bb}{State\+Extremes}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{struct_state_extremes_a7aec2695cfea470eeb7449cc27eb33bd}{update}} (const \doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \&record)
+\begin{DoxyCompactList}\small\item\em Update extreme values with a new record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \doxymbox{\hyperlink{struct_state_extremes_a94e277bbe90214cf06b74b56e0d43cca}{easternmost}}
+\item 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \doxymbox{\hyperlink{struct_state_extremes_a40d14d256221af6879551067018b695e}{westernmost}}
+\item 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \doxymbox{\hyperlink{struct_state_extremes_ac646323ebead03374c1164b5b74eec05}{northernmost}}
+\item 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \doxymbox{\hyperlink{struct_state_extremes_ace940feb89cd9562a42a9bcbb1c67044}{southernmost}}
+\item 
+bool \doxymbox{\hyperlink{struct_state_extremes_a43219e4eceade90275f936813f118649}{initialized}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds the extreme ZIP codes for a single state. 
+
+\begin{DoxyPrecond}{Precondition}
+All fields must be properly initialized before use 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Instances of \doxylink{struct_state_extremes}{State\+Extremes} can be used to track and update extreme ZIP codes for a state
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+This structure maintains the four geographic extreme ZIP codes for a state:\+ 
+
+easternmost, westernmost, northernmost, and southernmost. It updates these 
+
+values as records are processed. 
+\end{DoxyNote}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_state_extremes_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_state_extremes_afa4035d49cd82c90fa5b4005b83129bb}\index{StateExtremes@{StateExtremes}!StateExtremes@{StateExtremes}}
+\index{StateExtremes@{StateExtremes}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{StateExtremes()}{StateExtremes()}}
+{\footnotesize\ttfamily \label{struct_state_extremes_afa4035d49cd82c90fa5b4005b83129bb} 
+State\+Extremes::\+\+State\+Extremes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All fields are initialized to default values ~\newline
+ 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+An instance of \doxylink{struct_state_extremes}{State\+Extremes} with default values
+\end{DoxyReturn}
+Initializes the structure with sentinel values that will be replaced by the first actual record encountered. 
+
+\label{doc-func-members}
+\Hypertarget{struct_state_extremes_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_state_extremes_a7aec2695cfea470eeb7449cc27eb33bd}\index{StateExtremes@{StateExtremes}!update@{update}}
+\index{update@{update}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{struct_state_extremes_a7aec2695cfea470eeb7449cc27eb33bd} 
+void State\+Extremes::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} \&}]{record}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update extreme values with a new record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em record} & The ZIP code record to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+record must contain valid ZIP code data 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Extreme values are updated if the record represents a new extreme in any direction 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Compares the provided record\textquotesingle{}s coordinates with current extremes and updates if the record represents a new extreme in any direction.
+
+\begin{DoxyNote}{Note}
+For longitude in the US (negative values):\+
+\begin{DoxyItemize}
+\item Easternmost has the LEAST (most negative) value
+\item Westernmost has the GREATEST (least negative) value 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_state_extremes_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_state_extremes_a94e277bbe90214cf06b74b56e0d43cca}\index{StateExtremes@{StateExtremes}!easternmost@{easternmost}}
+\index{easternmost@{easternmost}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{easternmost}{easternmost}}
+{\footnotesize\ttfamily \label{struct_state_extremes_a94e277bbe90214cf06b74b56e0d43cca} 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} State\+Extremes::\+easternmost}
+
+ZIP code with least (most negative) longitude \Hypertarget{struct_state_extremes_a43219e4eceade90275f936813f118649}\index{StateExtremes@{StateExtremes}!initialized@{initialized}}
+\index{initialized@{initialized}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily \label{struct_state_extremes_a43219e4eceade90275f936813f118649} 
+bool State\+Extremes::\+initialized}
+
+Flag indicating if any data has been set \Hypertarget{struct_state_extremes_ac646323ebead03374c1164b5b74eec05}\index{StateExtremes@{StateExtremes}!northernmost@{northernmost}}
+\index{northernmost@{northernmost}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{northernmost}{northernmost}}
+{\footnotesize\ttfamily \label{struct_state_extremes_ac646323ebead03374c1164b5b74eec05} 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} State\+Extremes::\+northernmost}
+
+ZIP code with greatest latitude \Hypertarget{struct_state_extremes_ace940feb89cd9562a42a9bcbb1c67044}\index{StateExtremes@{StateExtremes}!southernmost@{southernmost}}
+\index{southernmost@{southernmost}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{southernmost}{southernmost}}
+{\footnotesize\ttfamily \label{struct_state_extremes_ace940feb89cd9562a42a9bcbb1c67044} 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} State\+Extremes::\+southernmost}
+
+ZIP code with least latitude \Hypertarget{struct_state_extremes_a40d14d256221af6879551067018b695e}\index{StateExtremes@{StateExtremes}!westernmost@{westernmost}}
+\index{westernmost@{westernmost}!StateExtremes@{StateExtremes}}
+\doxysubsubsection{\texorpdfstring{westernmost}{westernmost}}
+{\footnotesize\ttfamily \label{struct_state_extremes_a40d14d256221af6879551067018b695e} 
+\doxymbox{\hyperlink{struct_zip_code_record}{Zip\+Code\+Record}} State\+Extremes::\+westernmost}
+
+ZIP code with greatest (least negative) longitude 
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

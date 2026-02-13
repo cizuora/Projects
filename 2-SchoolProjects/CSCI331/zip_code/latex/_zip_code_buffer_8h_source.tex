@@ -1,0 +1,49 @@
+\doxysection{Zip\+Code\+Buffer.\+h}
+\hypertarget{_zip_code_buffer_8h_source}{}\label{_zip_code_buffer_8h_source}\doxymbox{\hyperlink{_zip_code_buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifndef\ ZIPCODEBUFFER\_H}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ ZIPCODEBUFFER\_H}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_zip_code_record_8h}{ZipCodeRecord.h}}"{}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_zip_code_buffer_a95584c8321e3783ecc7f199350be5b8d}{ZipCodeBuffer}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ std::ifstream\ inputFile;\ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ filename;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ fileIsOpen;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ headerSkipped;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ recordCount;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ parseCsvLine(\textcolor{keyword}{const}\ std::string\&\ line,\ \doxymbox{\hyperlink{struct_zip_code_record}{ZipCodeRecord}}\&\ record);}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ extractField(\textcolor{keyword}{const}\ std::string\&\ line,\ \textcolor{keywordtype}{size\_t}\&\ startPos);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00083\ \ \ \ \ std::string\ trim(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_zip_code_buffer_a95584c8321e3783ecc7f199350be5b8d}{ZipCodeBuffer}}(\textcolor{keyword}{const}\ std::string\&\ csvFilename);}
+\DoxyCodeLine{00095\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \doxymbox{\hyperlink{class_zip_code_buffer_af070305f8b71a6bee4cf455eb7ae065a}{\string~ZipCodeBuffer}}();}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_zip_code_buffer_a419b346988064a40021cf7b3d4f19d3d}{open}}();}
+\DoxyCodeLine{00114\ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_zip_code_buffer_a55f5179cbed643fd47274c6ca570adbb}{close}}();}
+\DoxyCodeLine{00124\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_zip_code_buffer_ac02f2bc85be95016dd20778f5f9f00c5}{getNextRecord}}(\doxymbox{\hyperlink{struct_zip_code_record}{ZipCodeRecord}}\&\ record);}
+\DoxyCodeLine{00134\ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_zip_code_buffer_ac236d04b688cf8bc0c1f87a4b7692d4b}{isOpen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_zip_code_buffer_a28d8f779cd342d5f8b8790ec958852c4}{getFilename}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_zip_code_buffer_a633257ba150bac649794dd029f3c6a5a}{getRecordCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_zip_code_buffer_a59b64918979bfa3b25780f01e5524aa5}{reset}}();}
+\DoxyCodeLine{00170\ \};}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ZIPCODEBUFFER\_H}}
+
+\end{DoxyCode}

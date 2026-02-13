@@ -1,0 +1,153 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Application to find extreme ZIP codes by state.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include "{}Zip\+Code\+Buffer.\+h"{}}\newline
+{\ttfamily \+\#include "{}Zip\+Code\+Record.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_state_extremes}{State\+Extremes}}
+\begin{DoxyCompactList}\small\item\em Holds the extreme ZIP codes for a single state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8cpp_ac22587babe799d0edb92c0005f260804}{print\+Table\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Print a formatted table header. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a46e01b1e85874b43ee277b80c91d3abd}{print\+State\+Row}} (const std::\+string \&state, const \doxymbox{\hyperlink{struct_state_extremes}{State\+Extremes}} \&extremes)
+\begin{DoxyCompactList}\small\item\em Print extreme ZIP codes for a single state. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_a8e56ff616bac46b1e4a4e98ebdfae211}{process\+Zip\+Code\+File}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Process CSV file and generate extreme ZIP codes report. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Main entry point of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application to find extreme ZIP codes by state. 
+
+\begin{DoxyAuthor}{Author}
+CSCI 331 Team 2 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/\+12/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Main entry point of the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command-\/line arguments \\
+\hline
+{\em argv} & Array of command-\/line argument strings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The program processes the specified CSV file and generates a report 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on error
+\end{DoxyReturn}
+The program expects one command-\/line argument:\+ the path to the CSV file. If no argument is provided, it uses a default filename.
+
+Usage:\+ ./\+zipcode\+\_\+extremes $<$csv\+\_\+filename$>$
+
+The program reads the CSV file and generates a report showing the easternmost, westernmost, northernmost, and southernmost ZIP codes for each state, listed in alphabetical order by state. \Hypertarget{main_8cpp_a46e01b1e85874b43ee277b80c91d3abd}\index{main.cpp@{main.cpp}!printStateRow@{printStateRow}}
+\index{printStateRow@{printStateRow}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printStateRow()}{printStateRow()}}
+{\footnotesize\ttfamily \label{main_8cpp_a46e01b1e85874b43ee277b80c91d3abd} 
+void print\+State\+Row (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{state}{, }\item[{const \doxymbox{\hyperlink{struct_state_extremes}{State\+Extremes}} \&}]{extremes}{}\end{DoxyParamCaption})}
+
+
+
+Print extreme ZIP codes for a single state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Two-\/character state abbreviation \\
+\hline
+{\em extremes} & \doxylink{struct_state_extremes}{State\+Extremes} structure containing the extreme values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+state is a valid state abbreviation and extremes contains valid data 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A formatted row of extreme ZIP codes is printed to standard output 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Prints one row of the report showing the four extreme ZIP codes for the specified state. All ZIP codes are right-\/aligned. \Hypertarget{main_8cpp_ac22587babe799d0edb92c0005f260804}\index{main.cpp@{main.cpp}!printTableHeader@{printTableHeader}}
+\index{printTableHeader@{printTableHeader}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printTableHeader()}{printTableHeader()}}
+{\footnotesize\ttfamily \label{main_8cpp_ac22587babe799d0edb92c0005f260804} 
+void print\+Table\+Header (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Print a formatted table header. 
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Column headers are printed to standard output 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None Prints column headers for the extreme ZIP codes report. Headers are formatted to align with data columns. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a8e56ff616bac46b1e4a4e98ebdfae211}\index{main.cpp@{main.cpp}!processZipCodeFile@{processZipCodeFile}}
+\index{processZipCodeFile@{processZipCodeFile}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{processZipCodeFile()}{processZipCodeFile()}}
+{\footnotesize\ttfamily \label{main_8cpp_a8e56ff616bac46b1e4a4e98ebdfae211} 
+int process\+Zip\+Code\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Process CSV file and generate extreme ZIP codes report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the CSV file containing ZIP code data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+filename is a valid path to a CSV file with the expected format 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The CSV file is read and a report of extreme ZIP codes by state is printed 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero on error
+\end{DoxyReturn}
+This function:\+
+\begin{DoxyEnumerate}
+\item Opens the CSV file using \doxylink{class_zip_code_buffer}{Zip\+Code\+Buffer}
+\item Reads all records and tracks extremes for each state
+\item Prints a formatted report of results
+\end{DoxyEnumerate}
+
+The report lists states alphabetically and shows the four extreme ZIP codes (east, west, north, south) for each state. 

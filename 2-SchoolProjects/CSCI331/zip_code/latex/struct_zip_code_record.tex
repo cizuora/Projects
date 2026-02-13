@@ -1,0 +1,188 @@
+\doxysection{Zip\+Code\+Record Struct Reference}
+\hypertarget{struct_zip_code_record}{}\label{struct_zip_code_record}\index{ZipCodeRecord@{ZipCodeRecord}}
+
+
+Represents a single ZIP code record with associated data This program reads a CSV file containing US postal code data and generates a report showing the easternmost, westernmost, northernmost, and southernmost ZIP codes for each state. The results are presented in alphabetical order by state abbreviation.  
+
+
+
+
+{\ttfamily \+\#include $<$Zip\+Code\+Record.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_zip_code_record_a945cbd69ab4bd148868e31aa2b807cc4}{Zip\+Code\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_zip_code_record_acad0813711cbde6db1650eadd46ecf6b}{Zip\+Code\+Record}} (int zip, const std::\+string \&place, const std::\+string \&st, const std::\+string \&cnty, double lat, double lon)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7}{zip\+Code}}
+\item 
+std::\+string \doxymbox{\hyperlink{struct_zip_code_record_a3990aec69ba79de839575d3669047e59}{place\+Name}}
+\item 
+std::\+string \doxymbox{\hyperlink{struct_zip_code_record_a831a44c6a908084952075b912f293963}{state}}
+\item 
+std::\+string \doxymbox{\hyperlink{struct_zip_code_record_a5f38f658c9f850fd6efd7d5c7c660d2d}{county}}
+\item 
+double \doxymbox{\hyperlink{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5}{latitude}}
+\item 
+double \doxymbox{\hyperlink{struct_zip_code_record_a627c754e94e5629ec977067edb056de1}{longitude}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single ZIP code record with associated data This program reads a CSV file containing US postal code data and generates a report showing the easternmost, westernmost, northernmost, and southernmost ZIP codes for each state. The results are presented in alphabetical order by state abbreviation. 
+
+Structure to hold information for a single ZIP code.
+
+Structure to hold information for a single ZIP code This header file defines the \doxylink{struct_zip_code_record}{Zip\+Code\+Record} structure, which is used to store information about US postal codes. Each record includes the ZIP code, place name, state, county, and geographic coordinates (latitude and longitude). This structure serves as the fundamental data unit for managing and processing ZIP code information in our application.
+
+Geographic extremes are determined by:\+
+\begin{DoxyItemize}
+\item Easternmost:\+ Least (most negative) longitude value
+\item Westernmost:\+ Greatest (least negative) longitude value
+\item Northernmost:\+ Greatest latitude value
+\item Southernmost:\+ Least latitude value
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+In the US, longitude values are negative (west of Prime Meridian) so "{}least longitude"{} means "{}furthest east"{}
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+All fields must be properly initialized before use 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Instances of \doxylink{struct_zip_code_record}{Zip\+Code\+Record} can be used to store and retrieve ZIP code information 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+This structure contains all fields from the US Postal Code database:\+ 
+
+-\/ ZIP code (5-\/digit postal code) 
+
+-\/ Place name (city/\+town name) 
+
+-\/ State (2-\/character state abbreviation) 
+
+-\/ County name 
+
+-\/ Geographic coordinates (latitude and longitude) 
+
+Longitude values are negative for locations west of the Prime Meridian 
+
+Latitude values are positive for locations north of the Equator 
+\end{DoxyNote}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_zip_code_record_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_zip_code_record_a945cbd69ab4bd148868e31aa2b807cc4}\index{ZipCodeRecord@{ZipCodeRecord}!ZipCodeRecord@{ZipCodeRecord}}
+\index{ZipCodeRecord@{ZipCodeRecord}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{ZipCodeRecord()}{ZipCodeRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a945cbd69ab4bd148868e31aa2b807cc4} 
+Zip\+Code\+Record::\+\+Zip\+Code\+Record (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\begin{DoxyPrecond}{Precondition}
+None 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All fields are initialized to default values 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+An instance of \doxylink{struct_zip_code_record}{Zip\+Code\+Record} with default values 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Initializes all numeric fields to zero and string fields to empty strings. 
+\end{DoxyNote}
+\Hypertarget{struct_zip_code_record_acad0813711cbde6db1650eadd46ecf6b}\index{ZipCodeRecord@{ZipCodeRecord}!ZipCodeRecord@{ZipCodeRecord}}
+\index{ZipCodeRecord@{ZipCodeRecord}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{ZipCodeRecord()}{ZipCodeRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_acad0813711cbde6db1650eadd46ecf6b} 
+Zip\+Code\+Record::\+\+Zip\+Code\+Record (\begin{DoxyParamCaption}\item[{int}]{zip}{, }\item[{const std::\+string \&}]{place}{, }\item[{const std::\+string \&}]{st}{, }\item[{const std::\+string \&}]{cnty}{, }\item[{double}]{lat}{, }\item[{double}]{lon}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zip} & ZIP code value \\
+\hline
+{\em place} & Place name \\
+\hline
+{\em st} & State abbreviation \\
+\hline
+{\em cnty} & County name \\
+\hline
+{\em lat} & Latitude coordinate \\
+\hline
+{\em lon} & Longitude coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+All parameters must be provided with valid values 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+An instance of \doxylink{struct_zip_code_record}{Zip\+Code\+Record} is created with the provided values 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+An instance of \doxylink{struct_zip_code_record}{Zip\+Code\+Record} initialized with specified values 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This constructor allows for convenient initialization of all fields in one step. 
+
+The caller is responsible for ensuring that the provided values are valid (e.\+g., zip code is 5 digits, state is 2 characters, etc.). 
+\end{DoxyNote}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_zip_code_record_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_zip_code_record_a5f38f658c9f850fd6efd7d5c7c660d2d}\index{ZipCodeRecord@{ZipCodeRecord}!county@{county}}
+\index{county@{county}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{county}{county}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a5f38f658c9f850fd6efd7d5c7c660d2d} 
+std::\+string Zip\+Code\+Record::\+county}
+
+County name \Hypertarget{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5}\index{ZipCodeRecord@{ZipCodeRecord}!latitude@{latitude}}
+\index{latitude@{latitude}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{latitude}{latitude}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a69f7ed91c7dc4c496deb5450a556f2f5} 
+double Zip\+Code\+Record::\+latitude}
+
+Latitude in decimal degrees (positive for north of equator) \Hypertarget{struct_zip_code_record_a627c754e94e5629ec977067edb056de1}\index{ZipCodeRecord@{ZipCodeRecord}!longitude@{longitude}}
+\index{longitude@{longitude}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{longitude}{longitude}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a627c754e94e5629ec977067edb056de1} 
+double Zip\+Code\+Record::\+longitude}
+
+Longitude in decimal degrees (negative for west of prime meridian) \Hypertarget{struct_zip_code_record_a3990aec69ba79de839575d3669047e59}\index{ZipCodeRecord@{ZipCodeRecord}!placeName@{placeName}}
+\index{placeName@{placeName}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{placeName}{placeName}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a3990aec69ba79de839575d3669047e59} 
+std::\+string Zip\+Code\+Record::\+place\+Name}
+
+City or town name \Hypertarget{struct_zip_code_record_a831a44c6a908084952075b912f293963}\index{ZipCodeRecord@{ZipCodeRecord}!state@{state}}
+\index{state@{state}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a831a44c6a908084952075b912f293963} 
+std::\+string Zip\+Code\+Record::\+state}
+
+2-\/character state abbreviation \Hypertarget{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7}\index{ZipCodeRecord@{ZipCodeRecord}!zipCode@{zipCode}}
+\index{zipCode@{zipCode}!ZipCodeRecord@{ZipCodeRecord}}
+\doxysubsubsection{\texorpdfstring{zipCode}{zipCode}}
+{\footnotesize\ttfamily \label{struct_zip_code_record_a2f84c7640278f702a9ae47350e5f05d7} 
+int Zip\+Code\+Record::\+zip\+Code}
+
+5-\/digit ZIP code 
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_zip_code_record_8h}{Zip\+Code\+Record.\+h}}\end{DoxyCompactItemize}
